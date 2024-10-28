@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Library</h1>
+        <p>Managing your library, made easy.</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#books">Books</a></li>
+            <li><a href="#members">Members</a></li>
+            <li><a href="#borrow">Borrow</a></li>
+            <li><a href="#return">Return</a></li>
+
+        </ul>
+    </nav>
+    <main>
+        <section id="home">
+            <h2>Welcome To Library</h2>
+            <p>This system allows you to manage your library's books, members, and borrowing/returning process.</p>
+            <img src="/images/library.jpg" alt="Library Image" width="1500px" height="400">
+            <button onclick="location.href='#books'">Explore Books</button>
+            <button onclick="location.href='#members'">View Members</button>
+        </section>
+        
+        <section id="books">
+            <h2>Book Catalog</h2>
+            <p>Browse through our collection of books.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Author</th>
+                        <th>ISBN</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="book-list">
+                    <!-- Book list will be populated here -->
+                </tbody>
+            </table>
+            <button><a href="#borrow">Borrow Book</a></button>
+        </section>
+        <section id="members">
+            <h2>Member List</h2>
+            <p>View our registered members.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                    </tr>
+                </thead>
+                <tbody id="member-list">
+                    <!-- Member list will be populated here -->
+                </tbody>
+            </table>
+            <button><a href="#borrow">Borrow Book</a></button>
+        </section>
+        <section id="borrow">
+            <h2>Borrow Book</h2>
+            <p>Borrow a book from our collection.</p>
+            <form id="borrow-form">
+                <label for="book-id">Book ID:</label>
+                <input type="text" id="book-id" name="book-id">
+                <label for="member-id">Member ID:</label>
+                <input type="text" id="member-id" name="member-id">
+                <button>Borrow</button>
+            </form>
+        </section>
+        <section id="return">
+            <h2>Return Book</h2>
+            <p>Return a borrowed book.</p>
+            <form id="return-form">
+                <label for="book-id-return">Book ID:</label>
+                <input type="text" id="book-id-return" name="book-id-return"> 
+                <button>Return</button>
+            </form>
+        </section>
+    </main>
+
+    <button id="alertbutton">click me!</button>
+    <script src="script.js"></script>
+</body>
+</html>
